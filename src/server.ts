@@ -31,5 +31,5 @@ app.post('/events', async (request, reply) => {
 });
 
 app.listen({ port: 3333 }).then(() => {
-    console.log('listening on port');
+    console.log('listening on port, {localhost: 3333}');
 });

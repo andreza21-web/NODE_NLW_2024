@@ -1,6 +1,7 @@
 import fastify from 'fastify';
 import fastifySwagger from '@fastify/swagger';
 import fastifySwaggerUI from '@fastify/swagger-ui';
+import fastifyCors from '@fastify/cors';
 
 import { serializerCompiler, validatorCompiler, jsonSchemaTransform } from "fastify-type-provider-zod";
 import { createEvent } from './routes/create-event';
@@ -12,6 +13,11 @@ import { getEventAttendees } from './routes/get-event-attendees';
 import { errorHandler } from './error-handler';
 
 const app = fastify();
+
+app.register(fastifyCors, {
+    origin: '*'
+    // origin: 'https://'
+})
 
 app.register(fastifySwagger, {
     swagger: {
@@ -44,6 +50,6 @@ app.register(getEventAttendees);
 
 app.setErrorHandler(errorHandler);
 
-app.listen({ port: 3333 }).then(() => {
+app.listen({ port: 3333, host: '0.0.0.0' }).then(() => {
     console.log('listening on port, {localhost: 3333}');
 });

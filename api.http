@@ -3,7 +3,7 @@ Content-Type: application/json
 
 
 {
-    "title": "Novo evento2",
+    "title": "Novo evento3",
     "details": null,
     "maximumAttendees": 1
 }
@@ -16,3 +16,6 @@ Content-Type: application/json
     "name": "Andreza Pessoa",
     "email": "andreza7@email.com.br"
 }
+
+###
+GET http://localhost:3333/events/41f3dd17-fbb0-4472-9332-acd3a133500d

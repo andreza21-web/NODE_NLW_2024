@@ -3,7 +3,16 @@ Content-Type: application/json
 
 
 {
-    "title": "Unite Summit",
-    "details": "Um novo evento para quem ama programação",
-    "maximumAttendees": 100
+    "title": "Novo evento2",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+POST  http://localhost:3333/events/41f3dd17-fbb0-4472-9332-acd3a133500d/attendees
+Content-Type: application/json
+
+{
+    "name": "Andreza Pessoa",
+    "email": "andreza7@email.com.br"
 }

@@ -3,18 +3,18 @@ Content-Type: application/json
 
 
 {
-    "title": "Novo evento3",
+    "title": 55,
     "details": null,
-    "maximumAttendees": 1
+    "maximumAttendees": 2
 }
 
 ###
-POST  http://localhost:3333/events/41f3dd17-fbb0-4472-9332-acd3a133500d/attendees
+POST  http://localhost:3333/events/6dc52c33-105d-4610-94a7-0af0bf574771/attendees
 Content-Type: application/json
 
 {
-    "name": "Andreza Pessoa",
-    "email": "andreza7@email.com.br"
+    "name": "Andreza",
+    "email": "andreza@email.com.br"
 }
 
 ###
@@ -24,3 +24,12 @@ GET http://localhost:3333/events/41f3dd17-fbb0-4472-9332-acd3a133500d
 
 
 GET http://localhost:3333/attendees/1/badge
+
+###
+
+GET http://localhost:3333/attendees/1/check-in
+
+
+### 
+
+GET http://localhost:3333/events/6dc52c33-105d-4610-94a7-0af0bf574771/attendees?query=carlos
